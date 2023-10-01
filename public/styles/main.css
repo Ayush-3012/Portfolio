@@ -1,0 +1,117 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.main {
+  display: flex;
+  padding: 3rem;
+  background-color: rgb(235, 201, 201);
+  gap: 1.5rem;
+}
+.main .main-left-div {
+  border-radius: 20px;
+  flex: 10%;
+  background-color: palevioletred;
+  padding: 1.2rem;
+}
+.main .main-left-div .main-left-div-upper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  gap: 1.2rem;
+}
+.main .main-left-div .main-left-div-upper .my-img {
+  border-radius: 20px;
+  padding: 0.6rem;
+  background-color: lightcoral;
+  transition: all 0.4s ease-in-out;
+}
+.main .main-left-div .main-left-div-upper .my-img img {
+  border-radius: 20px;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: all 0.4s ease-in-out;
+  filter: grayscale(100%);
+}
+.main .main-left-div .main-left-div-upper .my-img img:hover {
+  filter: grayscale(0);
+}
+.main .main-left-div .main-left-div-upper .my-name {
+  color: white;
+  transition: all 0.4s ease-in-out;
+}
+.main .main-left-div .main-left-div-upper .my-name:hover {
+  transform: translateY(-5px);
+  transition: all 0.4s ease-in-out;
+}
+.main .main-left-div .main-left-div-upper .connect-links .connect {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.2rem;
+}
+.main .main-left-div .main-left-div-upper .connect-links .connect .connect-items .connect-item-links {
+  text-decoration: none;
+  color: wheat;
+}
+.main .main-left-div .main-left-div-upper .connect-links .connect .connect-items .connect-item-links i {
+  font-size: 1.5rem;
+  padding: 0.5rem;
+  background-color: black;
+  border-radius: 50%;
+  transform: scale(1);
+  transition: all 0.3s ease-in-out;
+}
+.main .main-left-div .main-left-div-upper .connect-links .connect .connect-items .connect-item-links:hover i {
+  background-color: white;
+  color: black;
+  transform: scale(1.12);
+  transition: all 0.3s ease-in-out;
+}
+.main .main-right-div {
+  border-radius: 20px;
+  flex: 75%;
+  background-color: rgb(219, 187, 140);
+}
+.main .main-right-div .nav {
+  display: flex;
+}
+.main .main-right-div .nav .nav-left {
+  flex: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main .main-right-div .nav .nav-right {
+  flex: 60%;
+  background-color: blanchedalmond;
+  height: 7vh;
+  border-end-start-radius: 20px;
+  border-start-end-radius: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.main .main-right-div .nav .nav-right .nav-items {
+  color: brown;
+  text-decoration: none;
+  font-size: 1.2rem;
+  transform: scale(1);
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+.main .main-right-div .nav .nav-right .nav-items:hover {
+  transform: scale(1.15);
+  transition: all 0.3s ease-in-out;
+}/*# sourceMappingURL=main.css.map */
