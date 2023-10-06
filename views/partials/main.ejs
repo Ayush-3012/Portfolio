@@ -59,17 +59,24 @@
       <div class="main-right-div">
         <div class="nav">
           <div class="nav-left">
-            <h2>About Me</h2>
+            <div class="main-title">
+              <h2>
+                <span class="current-title"><%=sectionTitle%></span>
+                <!-- <span class="bg-text">my stats</span> -->
+              </h2> 
+            </div>
           </div>
           <div class="nav-right">
-            <a class="nav-items" href="/">Home</a>
-            <a class="nav-items" href="/about">About</a>
-            <a class="nav-items" href="/portfolio">Portfolio</a>
-            <a class="nav-items" href="/trainings">Trainings and Certificate</a>
-            <a class="nav-items" href="/contact">Contact</a>
+            <a class="nav-items" id="about" href="/">Home</a>
+            <a class="nav-items" id="" href="/about">About</a>
+            <a class="nav-items" id="" href="/portfolio">Portfolio</a>
+            <a class="nav-items" id="" href="/trainings"
+              >Trainings and Certificate</a
+            >
+            <a class="nav-items" id="" href="/contact">Contact</a>
           </div>
         </div>
-        <div class="current-item"></div>
+        <div class="current-item"><%-dataContent%></div>
       </div>
     </div>
   </body>
