@@ -31,6 +31,7 @@ body {
   flex: 10%;
   background-color: var(--color-grey);
   padding: 1.2rem;
+  height: 90vh;
 }
 .main .main-left-div .main-left-div-upper {
   display: flex;
@@ -104,6 +105,8 @@ body {
   flex: 75%;
   border-radius: 20px;
   background-color: var(--color-grey);
+  overflow-y: auto;
+  height: 90vh;
 }
 .main .main-right-div .nav {
   display: flex;
@@ -777,12 +780,18 @@ body {
   height: 12px;
 }
 
-.tech-stacks-container::-webkit-scrollbar-track {
+.main-right-div::-webkit-scrollbar {
+  width: 12px;
+}
+
+.tech-stacks-container::-webkit-scrollbar-track,
+.main-right-div::-webkit-scrollbar-track {
   background-color: var(--color-black);
   border-radius: 10px;
 }
 
-.tech-stacks-container::-webkit-scrollbar-thumb {
+.tech-stacks-container::-webkit-scrollbar-thumb,
+.main-right-div::-webkit-scrollbar-thumb {
   border-radius: 10px;
-  background-color: var(--color-secondary);
+  background-color: var(--color-teal);
 }/*# sourceMappingURL=main.css.map */
