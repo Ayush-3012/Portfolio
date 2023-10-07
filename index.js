@@ -15,7 +15,7 @@ app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.get("/", async (req, res) => {
-  fs.readFile(__dirname + "/public/home.html", "utf8", (err, data) => {
+  fs.readFile(__dirname + "/public/structures/home.html", "utf8", (err, data) => {
     if (err) {
       console.error("Error reading home.html:", err);
       return res.status(500).send("Error reading home.html");
@@ -25,7 +25,7 @@ app.get("/", async (req, res) => {
 });
 
 app.get("/about", async (req, res) => {
-  fs.readFile(__dirname + "/public/about.html", "utf8", (err, data) => {
+  fs.readFile(__dirname + "/public/structures/about.html", "utf8", (err, data) => {
     if (err) {
       console.error("Error reading about.html:", err);
       return res.status(500).send("Error reading about.html");
@@ -35,7 +35,7 @@ app.get("/about", async (req, res) => {
 });
 
 app.get("/portfolio", async (req, res) => {
-  fs.readFile(__dirname + "/public/portfolio.html", "utf8", (err, data) => {
+  fs.readFile(__dirname + "/public/structures/portfolio.html", "utf8", (err, data) => {
     if (err) {
       console.error("Error reading portfolio.html:", err);
       return res.status(500).send("Error reading portfolio.html");
@@ -45,7 +45,7 @@ app.get("/portfolio", async (req, res) => {
 });
 
 app.get("/trainings", async (req, res) => {
-  fs.readFile(__dirname + "/public/certificates.html", "utf8", (err, data) => {
+  fs.readFile(__dirname + "/public/structures/certificates.html", "utf8", (err, data) => {
     if (err) {
       console.error("Error reading certificates.html:", err);
       return res.status(500).send("Error reading certificates.html");
@@ -58,7 +58,7 @@ app.get("/trainings", async (req, res) => {
 });
 
 app.get("/contact", async (req, res) => {
-  fs.readFile(__dirname + "/public/contact.html", "utf8", (err, data) => {
+  fs.readFile(__dirname + "/public/structures/contact.html", "utf8", (err, data) => {
     if (err) {
       console.error("Error reading contact.html:", err);
       return res.status(500).send("Error reading contact.html");
