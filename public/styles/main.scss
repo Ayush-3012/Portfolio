@@ -25,45 +25,68 @@ body {
   padding: 3rem;
   background-color: var(--color-primary);
   gap: 1.5rem;
+  height: 100vh;
   .main-left-div {
     border-radius: 20px;
     flex: 10%;
     background-color: var(--color-grey);
     padding: 1.2rem;
     height: 90vh;
+    display: flex;
+    justify-content: center;
     // clip-path: polygon(100% 0, 93% 51%, 100% 100%, 0 100%, 7% 50%, 0 0);
     .main-left-div-upper {
       display: flex;
       flex-direction: column;
-      justify-content: space-around;
       align-items: center;
       gap: 1.2rem;
-      .my-img {
-        padding: 0.6rem;
-        transition: var(--var-transition);
-        img {
-          border-radius: 20px;
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
+      .my-info {
+        display: flex;
+        flex-direction: column;
+        gap: 1.2rem;
+        align-items: center;
+        .my-img {
+          padding: 0.6rem;
           transition: var(--var-transition);
-          filter: grayscale(100%);
+          img {
+            border-radius: 20px;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--var-transition);
+            filter: grayscale(100%);
+            &:hover {
+              padding: 1rem;
+              background-color: var(--color-teal);
+              filter: grayscale(0);
+            }
+          }
+        }
+        .my-name {
+          color: var(--color-secondary);
+          transition: var(--var-transition);
           &:hover {
-            padding: 1rem;
-            background-color: var(--color-teal);
-            filter: grayscale(0);
+            transform: translateY(-5px);
+            transition: var(--var-transition);
           }
         }
       }
-      .my-name {
-        color: var(--color-secondary);
-        transition: var(--var-transition);
-        &:hover {
-          transform: translateY(-5px);
-          transition: var(--var-transition);
-        }
-      }
       .connect-links {
+        display: flex;
+        align-items: baseline;
+        flex-direction: column;
+        padding: 20px;
+        .hamburger {
+          display: none;
+          flex-direction: column;
+          cursor: pointer;
+          .bar {
+            width: 50px;
+            height: 5px;
+            background-color: var(--color-secondary);
+            margin: 4px 0;
+          }
+        }
         .connect {
           list-style-type: none;
           display: flex;
@@ -139,23 +162,44 @@ body {
       .nav-right {
         flex: 60%;
         background-color: var(--color-primary);
-        height: 7vh;
         border-end-start-radius: 20px;
         border-start-end-radius: 20px;
         display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        align-items: center;
-        .nav-items {
-          color: var(--color-secondary);
-          text-decoration: none;
-          font-size: 1.2rem;
-          transform: scale(1);
-          transition: all 0.3s ease-in-out;
+        justify-content: space-between;
+        .hamburger-icon {
+          display: none;
+          flex-direction: column;
           cursor: pointer;
-          &:hover {
-            transform: scale(1.15);
+          .bar {
+            width: 50px;
+            height: 5px;
+            background-color: var(--color-secondary);
+            margin: 4px 0;
+          }
+        }
+        .nav-right-links {
+          width: 100%;
+          display: flex;
+          border-end-start-radius: 20px;
+          border-start-end-radius: 20px;
+          justify-content: space-around;
+          align-items: center;
+          .nav-items {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            color: var(--color-secondary);
+            text-decoration: none;
+            font-size: 1.2rem;
+            transform: scale(1);
             transition: all 0.3s ease-in-out;
+            cursor: pointer;
+            &:hover {
+              transform: scale(1.15);
+              transition: all 0.3s ease-in-out;
+              color: var(--color-light-coral);
+            }
           }
         }
       }
@@ -183,8 +227,8 @@ body {
       }
       .image {
         height: 90%;
-        width: 68%;
-        margin-left: 4rem;
+        width: 70%;
+        margin: 0 4rem;
         transition: var(--var-transition);
         img {
           width: 100%;
@@ -215,7 +259,6 @@ body {
       .name {
         font-size: 3rem;
         span {
-          // color: brown;
           color: var(--color-secondary);
         }
       }
@@ -252,6 +295,9 @@ body {
           font-weight: 600;
           color: var(--color-secondary);
         }
+      }
+      .resume-download {
+        font-size: 1.2rem;
       }
     }
     .right-about {
@@ -301,7 +347,6 @@ body {
             color: var(--color-secondary);
           }
           .small-text {
-            position: relative;
             text-transform: uppercase;
             font-size: 1.3rem;
             color: var(--color-teal);
@@ -467,14 +512,14 @@ body {
     grid-gap: 0.5rem;
     .portfolio-item {
       display: flex;
+      justify-content: center;
+      align-items: center;
       flex-direction: column;
       gap: 0.2rem;
       .portfolio-item-image {
         position: relative;
         transition: var(--var-transition);
         border-radius: 20px;
-        width: 23vw;
-        height: 25vh;
         display: flex;
         justify-content: center;
         img {
@@ -494,10 +539,6 @@ body {
           opacity: 0;
           transition: var(--var-transition);
           p {
-            position: absolute;
-            top: 0.2rem;
-            left: 0.5rem;
-            right: 0.5rem;
             color: var(--color-secondary);
             font-weight: bolder;
             border-radius: 10px;
@@ -509,7 +550,6 @@ body {
             justify-content: center;
             align-items: center;
             gap: 1.5rem;
-            height: 100%;
             .icon {
               background-color: var(--color-secondary);
               border-radius: 25%;
@@ -540,8 +580,8 @@ body {
         }
         &:hover {
           background-color: var(--color-primary);
-          padding: 0.8rem;
           transition: var(--var-transition);
+          box-shadow: 1px 1px 20px var(--color-secondary);
           cursor: pointer;
           .hover-items {
             transition: all 0.3s ease-in-out;
@@ -551,11 +591,11 @@ body {
             transition: all 0.3s ease-in-out;
             opacity: 0.8;
             filter: grayscale(0);
+            padding: 0.4rem 0.8rem;
           }
         }
       }
       .portfolio-item-about {
-        border-radius: 20px;
         padding: 0.5rem 1rem;
         h3 {
           color: var(--color-white);
@@ -585,14 +625,15 @@ body {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 2rem;
-    // margin-top: 3rem;
     .training {
       position: relative;
       background-color: var(--color-primary);
       border-start-end-radius: 15px;
       border-end-start-radius: 15px;
       transition: all 0.3s ease-in-out;
-      padding: 1.5rem 1rem;
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
       img {
         max-width: 100%;
         max-height: 100%;
@@ -648,11 +689,11 @@ body {
   padding: 1rem;
   .contact-content-con {
     display: flex;
-    // padding-top: 3.5rem;
     gap: 1.5rem;
     .left-contact {
       flex: 2;
-      padding: 0.5rem;
+      padding: 0.5rem 1rem;
+      // border-right: 2px solid var(--color-secondary);
       h4 {
         margin-top: 1rem;
         font-size: 2rem;
@@ -673,7 +714,6 @@ body {
           display: flex;
           align-items: center;
           justify-content: space-between;
-          font-size: 1rem;
           font-family: "Courier New", Courier, monospace;
           p {
             margin: 0.3rem 0 !important;
@@ -683,6 +723,7 @@ body {
             display: grid;
             grid-template-columns: 40px 1fr;
             color: var(--color-secondary);
+            gap: 0.2rem;
             i {
               color: var(--color-white);
               display: flex;
@@ -695,7 +736,7 @@ body {
       }
       .contact-icon {
         display: flex;
-        // margin-top: 2rem;
+        margin-top: 1rem;
         gap: 1rem;
         justify-content: center;
         a {
@@ -726,9 +767,10 @@ body {
         margin: 1.5rem 0;
         input,
         textarea {
-          border-radius: 30px;
+          border-end-end-radius: 30px;
+          border-start-start-radius: 30px;
           font-weight: inherit;
-          font-size: inherit;
+          font-size: 1.2rem;
           font-family: inherit;
           padding: 0.8rem 1.1rem;
           outline: none;
@@ -745,10 +787,6 @@ body {
       .i-c-2 {
         display: flex;
         gap: 1.5rem;
-      }
-      .submit-btn {
-        display: flex;
-        justify-content: flex-start;
       }
     }
   }
@@ -822,3 +860,5 @@ body {
   border-radius: 10px;
   background-color: var(--color-teal);
 }
+
+@import "./media";

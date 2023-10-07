@@ -1,0 +1,517 @@
+@media screen and (max-width: 1500px) {
+  /* MAIN (INDEX) */
+  .main {
+    flex-direction: column;
+    .main-left-div {
+      flex: 10%;
+      .main-left-div-upper {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 0 0.5rem;
+        .my-info {
+          flex-direction: row;
+          gap: 1.2rem;
+          .my-img {
+            width: 20vw;
+            img {
+              &:hover {
+                padding: 0.4rem;
+              }
+            }
+          }
+          .my-name {
+            font-size: 1.5rem;
+          }
+        }
+        .connect-links {
+          justify-self: flex-end;
+          .connect {
+            .connect-items {
+              .connect-item-links {
+                width: 55px;
+                height: 55px;
+                font-size: 1.8rem;
+              }
+            }
+          }
+        }
+      }
+    }
+    .main-right-div {
+      .nav {
+        .nav-right {
+          .nav-items {
+            background-color: var(--color-grey);
+            width: 50px;
+            height: 50px;
+            border-radius: 25%;
+            transition: var(--var-transition);
+            i {
+              font-size: 2rem;
+            }
+            &:hover {
+              transform: scale(1.15);
+              color: var(--color-light-coral);
+              transition: var(--var-transition);
+            }
+            span {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /* HOME PAGE */
+  .home-section {
+    .header-content {
+      .left-header {
+        .image {
+          height: 90%;
+          width: 100%;
+        }
+      }
+      .right-header {
+        display: flex;
+        gap: 1rem;
+        .name {
+          flex: 1;
+          display: flex;
+          width: 100%;
+          flex-direction: column;
+          justify-content: center;
+        }
+        p {
+          flex: 1;
+          font-size: 2rem;
+          word-spacing: 0.8rem;
+          line-height: 2.2rem;
+          letter-spacing: 0.2rem;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  /* MAIN INDEX */
+  .main {
+    .main-left-div {
+      .main-left-div-upper {
+        .connect-links {
+          .connect {
+            .connect-items {
+              .connect-item-links {
+                width: 70px;
+                height: 70px;
+                font-size: 2.2rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /* HOME PAGE */
+  .home-section {
+    .header-content {
+      display: flex;
+      flex-direction: column;
+      .left-header {
+        padding: 3rem;
+      }
+      .right-header {
+        .name {
+          display: block;
+        }
+        p {
+          padding: 1rem;
+        }
+      }
+    }
+  }
+
+  /* ABOUT PAGE */
+  .about-section {
+    .about-container {
+      display: flex;
+      flex-direction: column;
+      // background-color: rgb(131, 96, 53);
+      .left-about {
+        p {
+          font-size: 1.5rem;
+          line-height: 2rem;
+          letter-spacing: 0.1rem;
+        }
+      }
+      .right-about {
+        .about-item {
+          .abt-text {
+            .large-text {
+              padding: 2rem 0 0 3rem;
+              font-size: 3rem;
+            }
+            .small-text {
+              padding-left: 3rem;
+              font-size: 1.5rem;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /* PORTFOLIO PAGE */
+  .portfolio-section {
+    .portfolios {
+      grid-template-columns: repeat(2, 1fr);
+      .portfolio-item {
+        .portfolio-item-image {
+          .hover-items {
+            p {
+              padding: 1rem;
+              font-size: 1.2rem;
+            }
+            .icons {
+              .icon {
+                width: 70px;
+                height: 70px;
+                i {
+                  font-size: 3rem;
+                }
+              }
+            }
+          }
+        }
+        .portfolio-item-about {
+          h3 {
+            font-size: 2.2rem;
+          }
+          span {
+            font-size: 1.3rem;
+          }
+          p {
+            font-size: 1.2rem;
+          }
+        }
+      }
+    }
+  }
+
+  /* CERTIFICATIONS PAGE */
+  .certification-section {
+    .trainings {
+      grid-template-columns: repeat(2, 1fr);
+      .training {
+        .training-text {
+          h4 {
+            font-size: 2rem;
+          }
+          p {
+            font-size: 1.3rem;
+            line-height: 2rem;
+          }
+        }
+      }
+    }
+  }
+
+  /* CONTACT PAGE */
+  .contact-section {
+    .contact-content-con {
+      flex-direction: column;
+      .left-contact {
+        border-bottom: 5px solid var(--color-teal);
+        h4 {
+          font-size: 2.5rem;
+        }
+        p {
+          font-size: 1.3rem;
+          font-weight: 500;
+          span {
+            font-weight: 700;
+          }
+        }
+        .contact-info {
+          .contact-item {
+            p {
+              font-size: 1.5rem;
+            }
+            .icon {
+              font-size: 1.6rem;
+              i {
+                font-size: 1.6rem;
+              }
+            }
+          }
+        }
+        .contact-icon {
+          a {
+            width: 70px;
+            height: 70px;
+            font-size: 2.5rem;
+          }
+        }
+      }
+      .right-contact {
+        .input-control {
+          input,
+          textarea {
+            font-size: 1.6rem;
+            padding: 1.2rem 1.4rem;
+          }
+        }
+        .submit-btn {
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .main {
+    .main-left-div {
+      .main-left-div-upper {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0 1rem;
+        width: 100%;
+        .my-info {
+          width: 100%;
+          .my-name {
+            font-size: 2rem;
+          }
+        }
+        .connect-links {
+          .connect {
+            opacity: 0;
+            max-height: 0;
+            overflow: hidden;
+            flex-direction: column;
+            position: absolute;
+            right: 85px;
+            top: 180px;
+            z-index: 1;
+            border-radius: 10px;
+            width: 10%;
+            transition: var(--var-transition);
+            .connect-items {
+              .connect-item-links {
+                width: 70px;
+                height: 70px;
+                font-size: 2.2rem;
+              }
+            }
+          }
+          .connect.active {
+            opacity: 1;
+            max-height: 500px;
+            background-color: var(--color-teal);
+            transition: var(--var-transition);
+          }
+          .hamburger {
+            display: flex;
+          }
+        }
+      }
+    }
+  }
+
+  .about-section {
+    .about-container {
+      .left-about {
+        .resume-download {
+          font-size: 1.5rem;
+        }
+      }
+      .right-about {
+        grid-template-columns: repeat(1, 1fr);
+        .about-item {
+          .abt-text {
+            .large-text {
+              font-size: 3.2rem;
+            }
+            .small-text {
+              font-size: 2rem;
+            }
+          }
+        }
+      }
+    }
+    .tech-stacks {
+      .tech-stacks-title {
+        font-size: 1.5rem;
+      }
+    }
+    .timeline {
+      .stat-title {
+        font-size: 1.5rem;
+      }
+      .timeline-item {
+        .tl-icon {
+          width: 60px;
+          height: 60px;
+          border-radius: 25%;
+          i {
+            font-size: 2rem;
+          }
+        }
+        .tl-duration {
+          font-size: 1.5rem;
+        }
+        h5 {
+          font-size: 1.8rem;
+          span {
+            font-size: 1.5rem;
+          }
+        }
+        p {
+          font-size: 1.4rem;
+          line-height: 2rem;
+          word-spacing: 0.5rem;
+          letter-spacing: 0.1rem;
+        }
+      }
+    }
+  }
+
+  .portfolio-section {
+    .portfolios {
+      grid-template-columns: repeat(1, 1fr);
+      .portfolio-item {
+        padding: 1rem;
+        .portfolio-item-about {
+          h3 {
+            font-size: 2.2rem;
+          }
+          span {
+            font-size: 1.5rem;
+          }
+          p {
+            font-size: 1.5rem;
+          }
+        }
+      }
+    }
+  }
+
+  .certification-section {
+    .trainings {
+      grid-template-columns: repeat(1, 1fr);
+      .training {
+        padding: 2rem;
+        .training-text {
+          h4 {
+            font-size: 2.5rem;
+          }
+          p {
+            font-size: 1.8rem;
+            line-height: 2.5rem;
+          }
+        }
+      }
+    }
+  }
+
+  .contact-section {
+    .contact-content-con {
+      flex-direction: column;
+      .left-contact {
+        border-bottom: 5px solid var(--color-teal);
+        h4 {
+          font-size: 3rem;
+        }
+        p {
+          font-size: 1.8rem;
+          line-height: 2.4rem;
+          font-weight: 500;
+          span {
+            font-weight: 700;
+          }
+        }
+        .contact-info {
+          .contact-item {
+            p {
+              font-size: 1.8rem;
+            }
+            .icon {
+              font-size: 1.9rem;
+              i {
+                font-size: 1.9rem;
+              }
+            }
+          }
+        }
+        .contact-icon {
+          a {
+            width: 90px;
+            height: 90px;
+            font-size: 3rem;
+          }
+        }
+      }
+      .right-contact {
+        .input-control {
+          input,
+          textarea {
+            font-size: 2rem;
+            padding: 1.5rem 1.8rem;
+          }
+        }
+        .submit-btn {
+          font-size: 2rem;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .main {
+    .main-left-div {
+      .main-left-div-upper {
+        .connect-links {
+          .connect {
+            width: 15%;
+          }
+        }
+      }
+    }
+    .main-right-div {
+      .nav {
+        .nav-right {
+          align-items: center;
+          justify-content: center;
+          .nav-right-links {
+            opacity: 0;
+            max-height: 0;
+            overflow: hidden;
+            flex-direction: column;
+            z-index: 1;
+            border-radius: 10px;
+            gap: 1rem;
+            position: absolute;
+            top: 20rem;
+            width: 10%;
+            transition: var(--var-transition);
+            background-color: var(--color-primary);
+            padding: 1rem;
+          }
+          .nav-right-links.second-active {
+            opacity: 1;
+            max-height: 500px;
+            background-color: var(--color-teal);
+            transition: var(--var-transition);
+          }
+          .hamburger-icon {
+            display: flex;
+          }
+        }
+      }
+    }
+  }
+}

@@ -18,14 +18,23 @@
     <div class="main">
       <div class="main-left-div">
         <div class="main-left-div-upper">
-          <div class="my-img">
-            <img src="/img.jpg" alt="Ayush-Kumar" />
-          </div>
-          <div class="my-name">
-            <h2>Ayush Kumar</h2>
+          <div class="my-info">
+            <div class="my-img">
+              <img src="/img.jpg" alt="Ayush-Kumar" />
+            </div>
+            <div class="my-name">
+              <h2>Ayush Kumar</h2>
+            </div>
           </div>
           <div class="connect-links">
-            <ul class="connect">
+            <!--  -->
+            <div class="hamburger">
+              <div class="bar"></div>
+              <div class="bar"></div>
+              <div class="bar"></div>
+            </div>
+            <!--  -->
+            <ul class="connect nav-links">
               <li class="connect-items">
                 <a
                   href="/public/"
@@ -87,13 +96,35 @@
             </div>
           </div>
           <div class="nav-right">
-            <a class="nav-items" id="about" href="/">Home</a>
-            <a class="nav-items" id="" href="/about">About</a>
-            <a class="nav-items" id="" href="/portfolio">Portfolio</a>
-            <a class="nav-items" id="" href="/trainings"
-              >Trainings and Certificate</a
-            >
-            <a class="nav-items" id="" href="/contact">Contact</a>
+            <!--  -->
+            <div class="hamburger-icon">
+              <div class="bar"></div>
+              <div class="bar"></div>
+              <div class="bar"></div>
+            </div>
+            <!--  -->
+            <div class="nav-right-links">
+              <a class="nav-items" href="/">
+                <span>Home</span>
+                <i class="fa-solid fa-house"></i>
+              </a>
+              <a class="nav-items" href="/about">
+                <span>About</span>
+                <i class="fa-solid fa-user"></i>
+              </a>
+              <a class="nav-items" href="/portfolio">
+                <span>Portfolio</span>
+                <i class="fa-solid fa-briefcase"></i>
+              </a>
+              <a class="nav-items" href="/trainings">
+                <span>Certifications</span>
+                <i class="fa-solid fa-graduation-cap"></i>
+              </a>
+              <a class="nav-items" href="/contact">
+                <span>Contact</span>
+                <i class="fa-solid fa-headset"></i>
+              </a>
+            </div>
           </div>
         </div>
         <div class="current-item"><%-dataContent%></div>
@@ -101,3 +132,17 @@
     </div>
   </body>
 </html>
+
+<script>
+  const hamburger = document.querySelector(".hamburger");
+  const navLinks = document.querySelector(".nav-links");
+  const hamburgerIcon = document.querySelector(".hamburger-icon");
+  const navRightLinks = document.querySelector(".nav-right-links");
+
+  hamburger.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+  });
+  hamburgerIcon.addEventListener("click", () => {
+    navRightLinks.classList.toggle("second-active");
+  });
+</script>
