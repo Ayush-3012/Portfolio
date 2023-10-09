@@ -73,18 +73,13 @@
         </div>
       </div>
       <div class="right-contact">
-        <form action="" method="post" class="contact-form">
+        <form action="/submit" method="post" class="contact-form">
           <div class="input-control i-c-2">
-            <input
-              type="text"
-              placeholder="YOUR NAME"
-              name="sender_name"
-              required
-            />
+            <input type="text" placeholder="YOUR NAME" name="Name" required />
             <input
               type="email"
               placeholder="YOUR E-MAIL"
-              name="sender_email"
+              name="Mail"
               required
             />
           </div>
@@ -92,13 +87,13 @@
             <input
               type="text"
               placeholder="ENTER SUBJECT"
-              name="sender_subject"
+              name="Subject"
               required
             />
           </div>
           <div class="input-control">
             <textarea
-              name="sender_message"
+              name="Message"
               id=""
               cols="15"
               rows="8"
@@ -106,15 +101,22 @@
             ></textarea>
           </div>
           <div class="submit-btn btn-con">
-            <a href="/" class="main-btn">
+            <a href="#" class="main-btn">
               <span class="btn-text">Send Message</span>
               <span class="btn-icon"
                 ><i class="fa-solid fa-paper-plane"></i
               ></span>
             </a>
           </div>
+          <input type="submit" id="hiddenSubmit" hidden />
         </form>
       </div>
     </div>
   </div>
 </section>
+
+<script>
+  document.querySelector(".submit-btn").addEventListener("click", () => {
+    document.querySelector("#hiddenSubmit").click();
+  });
+</script>

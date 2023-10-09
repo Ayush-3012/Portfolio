@@ -1,4 +1,5 @@
 import express from "express";
+import sendMessage from "./mail.js";
 import bodyParser from "body-parser";
 import { dirname } from "path";
 import { fileURLToPath } from "url";
@@ -92,6 +93,22 @@ app.get("/contact", async (req, res) => {
       });
     }
   );
+});
+
+app.post("/submit", (req, res) => {
+  const email = req.body.Mail;
+  const name = req.body.Name;
+  const subject = req.body.Subject;
+  const text = req.body.Message;
+  sendMessage(email, name, subject, text, function (err, data) {
+    if (err) {
+      res.status(500).json({ message: "Internal Error" });
+    } else {
+      res.json({ message: "Message Sent !!!" });
+    }
+  });
+
+  res.redirect("/");
 });
 
 app.listen(port, () => {
