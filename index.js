@@ -100,6 +100,7 @@ app.post("/submit", (req, res) => {
   const name = req.body.Name;
   const subject = req.body.Subject;
   const text = req.body.Message;
+
   sendMessage(email, name, subject, text, function (err, data) {
     if (err) {
       res.status(500).json({ message: "Internal Error" });
@@ -107,8 +108,6 @@ app.post("/submit", (req, res) => {
       res.json({ message: "Message Sent !!!" });
     }
   });
-
-  res.redirect("/");
 });
 
 app.listen(port, () => {

@@ -6,8 +6,8 @@ dotenv.config();
 
 const auth = {
   auth: {
-    api_key: "73f65f6d13978f6a071fedab247c97a6-5465e583-2202890d",
-    domain: "sandboxb90d9736da5f4d82afd3c09a7758b816.mailgun.org",
+    api_key: process.env.API_KEY,
+    domain: process.env.DOMAIN,
   },
 };
 
